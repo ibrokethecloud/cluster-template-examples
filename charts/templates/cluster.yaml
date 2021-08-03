@@ -23,7 +23,7 @@ spec:
 {{ toYaml .Values.rancherValues | indent 4 }}
   {{- end }}
   rkeConfig:
-    nodePools: 
+    machinePools: 
     {{- if .Values.nodepools }} {{ range $index, $nodepool := .Values.nodepools }}
     - controlPlaneRole: {{ $nodepool.controlplane }}
       etcdRole: {{ $nodepool.etcd }}
