@@ -30,7 +30,7 @@ spec:
       workerRole: {{ $nodepool.worker }}
       quantity: {{ $nodepool.quantity }}
       name: {{ $nodepool.name }}
-      nodeConfigRef:
+      machineConfigRef:
         {{- if eq $.Values.cloudprovider "amazonec2" }}
         kind: Amazonec2Config
         {{- else if eq $.Values.cloudprovider "vsphere" }}
